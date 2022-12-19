@@ -25,9 +25,11 @@ const Icons: {[key in Controls]: AvailableIcons} = {
     [Controls.previous]: AvailableIcons.previous
 }
 
+type ButtonSizes = 'small' | 'medium' | 'large';
+
 interface BtnControlOptions {
     control?: Controls;
-    size?: 'small' | 'medium' | 'large';
+    size?: ButtonSizes;
     onClick?: (event: any) => void;
 }
 
