@@ -1,0 +1,25 @@
+button {
+  color: white;
+  background: #090909;
+  border-radius: 50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  outline: none;
+  border-width: 0;
+  box-shadow: inset #414141 0 0 .1rem .2rem;
+  transition: all 250ms ease-in-out;
+
+  &:hover {
+    background: #1a1a1a;
+    box-shadow: inset #414141 0 0 .1rem .15rem;
+  }
+
+  &:active {
+    background: #1a1a1a;
+    box-shadow: inset #414141 0 0 .1rem .25rem;
+  }
+}
