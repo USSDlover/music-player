@@ -2,8 +2,6 @@ button {
   color: white;
   background: #090909;
   border-radius: 50%;
-  width: 2.75rem;
-  height: 2.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +10,21 @@ button {
   border-width: 0;
   box-shadow: inset #414141 0 0 .1rem .2rem;
   transition: all 250ms ease-in-out;
+
+  &[data-size="small"] {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  &[data-size="medium"] {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &[data-size="large"] {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
 
   &:hover {
     background: #1a1a1a;

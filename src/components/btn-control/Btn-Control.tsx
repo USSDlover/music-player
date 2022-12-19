@@ -26,13 +26,14 @@ const Icons: {[key in Controls]: AvailableIcons} = {
 }
 
 interface BtnControlOptions {
-    control: Controls;
-    onClick: (event: any) => void;
+    control?: Controls;
+    size?: 'small' | 'medium' | 'large';
+    onClick?: (event: any) => void;
 }
 
-const BtnControl: FunctionComponent<BtnControlOptions> = ({control = Controls.play, onClick = () => {}}): JSX.Element => {
+const BtnControl: FunctionComponent<BtnControlOptions> = ({size = 'medium', control = Controls.play, onClick = () => {}}): JSX.Element => {
     return (
-        <button onClick={onClick}>
+        <button onClick={onClick} data-size={size}>
             <span className="material-symbols-outlined">{Icons[control]}</span>
         </button>
     );
