@@ -6,7 +6,8 @@ export enum Controls {
     stop = 'STOP',
     pause = 'PAUSE',
     next = 'NEXT',
-    previous = 'PREVIOUS'
+    previous = 'PREVIOUS',
+    eject = 'EJECT'
 }
 
 enum AvailableIcons {
@@ -14,7 +15,8 @@ enum AvailableIcons {
     stop = 'stop',
     pause = 'pause',
     next = 'skip_next',
-    previous = 'skip_previous'
+    previous = 'skip_previous',
+    eject = 'eject'
 }
 
 const Icons: {[key in Controls]: AvailableIcons} = {
@@ -22,7 +24,8 @@ const Icons: {[key in Controls]: AvailableIcons} = {
     [Controls.stop]: AvailableIcons.stop,
     [Controls.pause]: AvailableIcons.pause,
     [Controls.next]: AvailableIcons.next,
-    [Controls.previous]: AvailableIcons.previous
+    [Controls.previous]: AvailableIcons.previous,
+    [Controls.eject]: AvailableIcons.eject
 }
 
 type ButtonSizes = 'small' | 'medium' | 'large';
