@@ -1,9 +1,9 @@
 import { FunctionComponent, useState } from 'react';
-import BtnControl, { Controls } from '../btn-control/Btn-Control';
+import { Controls, BtnControl } from '../../atoms';
 
 interface PlayerControlsOptions {}
 
-const PlayerControls: FunctionComponent<PlayerControlsOptions> = (): JSX.Element => {
+export const PlayerControls: FunctionComponent<PlayerControlsOptions> = (): JSX.Element => {
     const [played, setPlayed] = useState<boolean>(false);
 
     const onPlay = (): void => { setPlayed(!played) }
@@ -18,5 +18,3 @@ const PlayerControls: FunctionComponent<PlayerControlsOptions> = (): JSX.Element
         </div>
     );
 }
-
-export default PlayerControls;

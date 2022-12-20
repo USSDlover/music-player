@@ -33,12 +33,10 @@ interface BtnControlOptions {
     onClick?: (event: any) => void;
 }
 
-const BtnControl: FunctionComponent<BtnControlOptions> = ({size = 'medium', control = Controls.play, onClick = () => {}}): JSX.Element => {
+export const BtnControl: FunctionComponent<BtnControlOptions> = ({size = 'medium', control = Controls.play, onClick = () => {}}): JSX.Element => {
     return (
         <button onClick={onClick} data-size={size}>
             <span className="material-symbols-outlined">{Icons[control]}</span>
         </button>
     );
 }
-
-export default BtnControl;
