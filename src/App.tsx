@@ -6,9 +6,7 @@ import { Player } from './components';
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                <Player />
-            </header>
+            <Player />
         </div>
     );
 }
