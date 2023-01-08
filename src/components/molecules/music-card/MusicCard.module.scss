@@ -1,0 +1,16 @@
+.musicCard {
+  max-width: 70%;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.25rem;
+
+   p {
+     font-size: .8em;
+     max-width: 70%;
+     overflow: hidden;
+     white-space: nowrap;
+     text-overflow: ellipsis;
+   }
+}
