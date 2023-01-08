@@ -21,7 +21,7 @@ export const PlayList: FunctionComponent<PlayListOptions> = ({trackList, onSelec
     useEffect(() => {
         if (selectedMusic && onSelectMusic)
             onSelectMusic(selectedMusic);
-    }, [selectedMusic, onSelectMusic]);
+    }, [selectedMusic]);
 
     return <div className={styles.playList}>{trackList ?
         musicList
