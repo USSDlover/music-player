@@ -14,18 +14,24 @@ const convertToArray = (list?: FileList): File[] => {
     return fileList;
 }
 
-export const PlayList: FunctionComponent<PlayListOptions> = ({trackList, onSelectMusic}): JSX.Element => {
-    const [selectedMusic, setSelectedMusic] = useState<File>();
-    const musicList: File[] = useMemo(() => convertToArray(trackList), [trackList]);
+export const PlayList: FunctionComponent<PlayListOptions> = ({ trackList, onSelectMusic }): JSX.Element => {
+    const [ selectedMusic, setSelectedMusic ] = useState<File>();
+    const musicList: File[] = useMemo(() => convertToArray(trackList), [ trackList ]);
 
     useEffect(() => {
         if (selectedMusic && onSelectMusic)
             onSelectMusic(selectedMusic);
-    }, [selectedMusic]);
+    }, [ selectedMusic ]);
 
-    return <div className={styles.playList}>{trackList ?
-        musicList
-            .map((track, index) =>
-                <MusicCard selected={track === selectedMusic} key={index + 1} track={track} onMusicSelect={setSelectedMusic}/>
-            ) : ''}</div>;
+    return <div className={ styles.playList }>
+        { trackList ?
+            musicList.map((track, index) =>
+                    <MusicCard
+                        selected={ track === selectedMusic }
+                        key={ index + 1 }
+                        track={ track }
+                        onMusicSelect={ setSelectedMusic }
+                    />
+                ) : '' }
+    </div>;
 }

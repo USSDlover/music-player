@@ -1,0 +1,29 @@
+.player {
+  position: relative;
+
+  .audio {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .controls {
+    grid-area: controls;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--c-background);
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0 -0.02rem 0.35rem 0.005rem #0d0e11;
+  }
+
+  .playList {
+    overflow-y: scroll;
+    height: calc(100vh - 4.5rem);
+    padding-bottom: 4.5rem;
+  }
+}

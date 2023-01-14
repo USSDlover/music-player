@@ -1,5 +1,9 @@
+:root {
+  --c-background: #282c34;
+}
+
 .App {
-  background-color: #282c34;
+  background-color: var(--c-background);
   min-height: 100vh;
 
   color: white;

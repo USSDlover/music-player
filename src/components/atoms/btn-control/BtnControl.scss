@@ -35,4 +35,9 @@ button {
     background: #1a1a1a;
     box-shadow: inset #414141 0 0 .1rem .25rem;
   }
+
+  &[disabled] {
+    background: #494949;
+    box-shadow: inset #1c1c1c 0 0 0 0.3rem;
+  }
 }

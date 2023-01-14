@@ -6,7 +6,7 @@ interface UploadDirectoryOption {
 
 export const UploadDirectory: FunctionComponent<UploadDirectoryOption> = React.forwardRef((props, ref): JSX.Element => {
     return <input
-        style={{ visibility: 'hidden' }}
+        style={{ visibility: 'hidden', position: 'fixed', bottom: 0, left: 0 }}
         type="file"
         onInput={props.onDirectorySelect}
         // @ts-ignore

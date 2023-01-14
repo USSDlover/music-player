@@ -1,0 +1,13 @@
+.playerControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .progress {}
+  .volume {}
+  .controls {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+  }
+}
